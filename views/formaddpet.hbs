@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+//<!--background="img/addpet.jpg"--></script>
+
+<body id="ff">
+
+    <section id="services-container">
+        <h2 style="color:white;text-align:center;font-size:45px" class="h-primary">ADD A PET DOG</h2>
+        <div id="services">
+            <div class="box center">
+                <form method="post" action="/addp" ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+
+                    <p>Name:<br>
+                        <input type="text" name="name" ng-model="name" required>
+                    <div style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+                        <div ng-show="myForm.name.$error.required">Name is required.</div>
+                    </div>
+                    </p><br>
+
+                    <p>Name of dog you wish to add:<br>
+                        <input type="text" name="dogname" ng-model="dogname" required>
+                    <div style="color:red" ng-show="myForm.dogname.$dirty && myForm.dogname.$invalid">
+                        <div ng-show="myForm.dogname.$error.required">Name of dog required.</div>
+                    </div>
+                    </p><br>
+
+                    <p>Breed of dog:<br>
+                        <input type="text" name="breed" ng-model="breed" required>
+                    <div style="color:red" ng-show="myForm.breed.$dirty && myForm.breed.$invalid">
+                        <div ng-show="myForm.breed.$error.required">Breed of dog required.</div>
+                    </div>
+                    </p><br>
+
+                    <p>Age of dog(if known):<br>
+                        <input type="text" name="age" ng-model="age">
+                    </p><br>
+
+                    <p>Email:<br>
+                        <input type="email" name="email" ng-model="email" required>
+                    <div style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <div ng-show="myForm.email.$error.required">Email is required.</div>
+                        <div ng-show="myForm.email.$error.email">Invalid email address.</div>
+                    </div>
+                    </p><br>
+
+
+                    <p>Contact Number:<br>
+                        <input type="text" name="phone" ng-model="phone" required>
+                    <div style="color:red" ng-show="myForm.phone.$dirty && myForm.phone.$invalid">
+                        <div ng-show="myForm.phone.$error.required">Phone number is required.</div>
+                        <div ng-show="myForm.phone.$error.ph">Invalid phone number.</div>
+                    </div>
+                    </p><br>
+
+                    <p>
+                        <input type="submit" style="color:white;font-family:'Bree Serif',serif;background-color: brown;"
+                            ng-disabled="myForm.name.$dirty && myForm.name.$invalid ||
+myForm.dogname.$dirty && myForm.dogname.$invalid ||
+myForm.breed.$dirty && myForm.breed.$invalid ||
+myForm.email.$dirty && myForm.email.$invalid ||
+myForm.address.$dirty && myForm.address.$invalid ||
+myForm.pin.$dirty && myForm.pin.$invalid ||
+myForm.phone.$dirty && myForm.phone.$invalid">
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function ($scope) {
+            
+        });
+    </script>
+
+</body>
+
+</html>

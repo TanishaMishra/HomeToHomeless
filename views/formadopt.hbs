@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Adopt</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+
+<body>
+    <div id="mcon">
+        <div id="hd">
+            <h1>DOGS AVAILABLE FOR ADOPTION</h1>
+        </div>
+        <div >
+            <table id="customers">
+                <tr>
+                    <th>Owners Name</th>
+                    <th>Petname</th>
+                    <th>Breed</th>
+                    <th>Age</th>
+                    <th>Owners Email</th>
+                    <th>Owners PhoneNumber</th>
+                </tr>
+                {{#each data}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.dogname}}</td>
+                    <td>{{this.breed}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

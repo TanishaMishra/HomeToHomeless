@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeToHomeless</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <script>
+        function formcheck() {
+            var name = document.forms["f1"]["name"].value;
+            var email = document.forms["f1"]["email"].value;
+            var phone = document.forms["f1"]["phone"].value;
+            if (!name.match(/^[A-Za-z\s]*/) || name.length == 0) {
+                alert("INVALID NAME PLEASE ENTER AGAIN");
+            }
+            if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert("INVALID EMAIL ADDRESS");
+            }
+            if (!phone.match(/^\d{10}$/)) {
+                alert("INVALID PHONE NUMBER");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Pets</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+            <h1 class="h-primary">Welcome to HomeToHomeless</h1><br>
+            <p>Pet adoption will almost always be more affordable than buying a puppy for sale from a breeder or finding
+                a
+                kitten for sale from a litter. There are more benefits as well. Since pets in rescues and shelters
+                usually
+                come from a home where the owners ran out of money, got divorced, or had to move, it's common to find
+                that
+                the dogs and cats on our website are already housetrained, good with kids, or do well with other pets.
+                People are finding out that buying a puppy for sale from a breeder isn't all it's cracked up to be, and
+                the
+                dogs and cats don't leave the organization without having their shots and being taken to the vet. That
+                means
+                less stress, and more savings! So what are you waiting for? Go find that perfect pet!</p>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/adopt.jpg" alt="">
+                <h2 class="h-secondary center">Adopt</h2>
+                <p class="center">Pets give you unconditional love, loyalty and companionship. Having a furry friend
+                    means you will always have a little living being, waiting patiently for you at home and ready to
+                    welcome you with a wagging tail or a purr.</p>
+                <br><button class="btn" id="btnadopt" onclick="window.location.href='/adopt'">Adopt</button>
+            </div>
+            <div class="box">
+                <img src="img/addpet.jpg" alt="">
+                <h2 class="h-secondary center">Add Pet</h2>
+                <p class="center">In case you need to give your pet for adoption we got you covered. You could simply
+                    click on the button below and enter the required details and you can find a new owner for your pet.
+                </p>
+                <br><button class="btn" id="btnadd" onclick="window.location.href='/addpet'">Add Pet</button>
+            </div>
+           
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Pets Who Got A New Home Through Us</h1>
+        <div class="pets">
+            <div class="boxp">
+                <img src="img/maxine.jpg" alt="">
+                <h2 class="h-secondary center">Maxine</h2>
+            </div>
+            <div class="boxp">
+                <img src="img/sasha.jpg" alt="">
+                <h2 class="h-secondary center">Sasha</h2>
+            </div>
+            <div class="boxp">
+                <img src="img/wilbur.jpg" alt="">
+                <h2 class="h-secondary center">Wilbur</h2>
+            </div>
+            <div class="boxp">
+                <img src="img/blaze.jpg" alt="">
+                <h2 class="h-secondary center">Blaze</h2>
+            </div>
+            <div class="boxp">
+                <img src="img/cici.jpg" alt="">
+                <h2 class="h-secondary center">Cici</h2>
+            </div>
+            <div class="boxp">
+                <img src="img/casper.jpg" alt="">
+                <h2 class="h-secondary center">Casper</h2>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us When Your Pet Is Adopted</h1>
+        <div id="contact-box">
+            <form name="f1" action="/umessage" method="post">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="8"></textarea>
+                </div>
+                <div class="form-group" id="btn">
+                    <input type="submit" id="submit" onclick="formcheck()">
+                    <input type="reset" id="reset">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            <br><br>
+            Copyright &copy; www.adoptPetDog.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>

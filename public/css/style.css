@@ -1,0 +1,249 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*addpet*/
+#ff{
+    background-image: url("t4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: rgb(247, 243, 53);
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 150px;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('dogbg.jpg') no-repeat center center/cover;
+    height: 675px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#services .box{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2% 5%;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    width:30%;
+}
+
+#services .box img{ 
+   height: 160px;
+   width:90%;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+}
+
+#services .box button{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:brown;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+/* Available Pets Section */
+/*#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('img/d1.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}*/
+
+.pets{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.boxp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    margin:3%;
+}
+.boxp img{
+   height: 200px;
+   width:250px;
+   margin: auto;
+   display: block;
+}
+
+/* Contact Section */
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 96%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+#stats{
+    font-size: 40px;
+}
+
+/* Utility Classes */
+
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center{
+    text-align: center;
+}
